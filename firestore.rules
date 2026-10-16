@@ -1,0 +1,40 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function validStatus(status) {
+      return status in ['New', 'Contacted', 'Converted', 'Lost'];
+    }
+
+    match /leads/{leadId} {
+      allow read: if signedIn();
+
+      allow create: if signedIn()
+        && request.resource.data.keys().hasAll([
+          'name', 'mobile', 'pincode', 'product', 'source',
+          'dealerId', 'dealerName', 'status', 'createdAt'
+        ])
+        && request.resource.data.name is string
+        && request.resource.data.mobile.matches('^[6-9][0-9]{9}$')
+        && request.resource.data.pincode.matches('^[0-9]{6}$')
+        && request.resource.data.product is string
+        && request.resource.data.source is string
+        && request.resource.data.dealerId is string
+        && request.resource.data.dealerName is string
+        && request.resource.data.status == 'New'
+        && request.resource.data.createdAt is timestamp;
+
+      allow update: if signedIn()
+        && request.resource.data.diff(resource.data)
+          .affectedKeys().hasOnly(['status'])
+        && validStatus(request.resource.data.status);
+
+      allow delete: if false;
+    }
+  }
+}
