@@ -1,0 +1,41 @@
+lead_id,action,reason
+L1001,merged,Mobile number already exists in Firestore
+L1002,merged,Mobile number already exists in Firestore
+L1003,merged,Mobile number already exists in Firestore
+L1004,merged,Mobile number already exists in Firestore
+L1005,merged,Mobile number already exists in Firestore
+L1006,merged,Mobile number already exists in Firestore
+L1007,merged,Mobile number already exists in Firestore
+L1008,merged,Mobile number already exists in Firestore
+L1009,rejected,Invalid Indian mobile number
+L1010,merged,Mobile number already exists in Firestore
+L1011,merged,Mobile number already exists in Firestore
+L1012,rejected,Invalid six-digit PIN code
+L1013,merged,Mobile number already exists in Firestore
+L1014,merged,Mobile number already exists in Firestore
+L1015,merged,Mobile number already exists in Firestore
+L1016,merged,Mobile number already exists in Firestore
+L1017,merged,Mobile number already exists in Firestore
+L1018,merged,Mobile number already exists in Firestore
+L1019,merged,Mobile number already exists in Firestore
+L1020,merged,Mobile number already exists in Firestore
+L1021,merged,Mobile number already exists in Firestore
+L1022,merged,Mobile number already exists in Firestore
+L1023,rejected,Missing or invalid product
+L1024,merged,Mobile number already exists in Firestore
+L1025,merged,Mobile number already exists in Firestore
+L1026,rejected,Missing name
+L1027,merged,Mobile number already exists in Firestore
+L1028,merged,Mobile number already exists in Firestore
+L1029,merged,Mobile number already exists in Firestore
+L1030,merged,Mobile number already exists in Firestore
+L1031,merged,Mobile number already exists in Firestore
+L1032,merged,Mobile number already exists in Firestore
+L1033,merged,Mobile number already exists in Firestore
+L1034,merged,Mobile number already exists in Firestore
+L1035,merged,Mobile number already exists in Firestore
+L1036,merged,Duplicate mobile number within CSV
+L1037,merged,Duplicate mobile number within CSV
+L1038,merged,Duplicate mobile number within CSV
+L1039,merged,Duplicate mobile number within CSV
+L1033,merged,Duplicate mobile number within CSV
